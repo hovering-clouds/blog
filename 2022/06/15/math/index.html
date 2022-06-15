@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://hovering-clouds.github.io/img/erhai.jpg">
 <meta property="article:published_time" content="2022-06-15T11:52:46.650Z">
-<meta property="article:modified_time" content="2022-06-15T08:51:27.267Z">
+<meta property="article:modified_time" content="2022-06-15T16:06:42.694Z">
 <meta property="article:author" content="垂云">
 <meta property="article:tag" content="1">
 <meta name="twitter:card" content="summary_large_image">
@@ -395,6 +395,12 @@ class="math inline">\(\blacksquare\)</span></p>
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/personal-blog/2022/06/16/test/" title="test">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">test</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
@@ -413,6 +419,41 @@ class="math inline">\(\blacksquare\)</span></p>
             
   <article id="comments" lazyload>
     
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"hovering-clouds/blog-comment","repo-id":"R_kgDOHgXADA","category":"General","category-id":"DIC_kwDOHgXADM4CPsFk","theme-light":"light","theme-dark":"dark","mapping":"title","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN","data-loading":"lazy"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
 
   </article>
 
