@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>z=x+iy</title>
+    <link href="/personal-blog/2022/06/15/math/"/>
+    <url>/personal-blog/2022/06/15/math/</url>
+    
+    <content type="html"><![CDATA[<h1 id="数学随笔4">数学随笔#4</h1><blockquote><p>title：z=x+iy</p><p>author: hovering-clouds</p><p>date：2022/06/13</p><p>tag：复变函数</p><p>category：问题探讨</p></blockquote><h2 id="问题引入">问题引入</h2><p>记得刚开始学复变，看课本(复变函数简明教程)的时候，在第一节里面就看到这样一句话：(有删改)</p><blockquote><p>任意复数z有关于复平面坐标的简单表示形式z=x+iy，但是反之x和y不能用z的表达式给出，事实上，<strong>我们以后将会证明</strong>，x和y不能用z的幂级数<spanclass="math inline">\(\sum_\limits{n=0}^\infty a_nz^n\)</span> 表示.</p></blockquote><p>但实话说，我一学期下来，课本也算来来回回翻了一两遍了，也没在哪里找到这里所谓的"我们以后将会证明"，这不禁让我想起之前看抽代参考书时，里面写"此命题是x.x小节定理xx的简单推论"，但我回去盯着那定理看了老半天，愣是没发现这两者之间有啥关系，真可谓异曲同工。也许作者当时想着后面补上，结果编书的时候写着写着就忘了……</p><p>不过既然已经结课了，基本的知识也算是掌握了，那么缺的就是重新回忆起这句话。今天开小差的时候，这个命题突然浮现在脑海中，于是一个简单的证明就出来了：</p><h2 id="命题及证明">命题及证明</h2><p><strong>命题：</strong>设复数 z=x+iy (x,y<spanclass="math inline">\(\in\mathbb{R}\)</span>)，则x与y不能用z的幂级数形式表示</p><blockquote><p><strong>分析：</strong>显然，如果x或者y能用z的幂级数<spanclass="math inline">\(\sum_\limits{n=0}^\inftya_nz^n\)</span>表示，其中<spanclass="math inline">\(a_i\in\mathbb{C}\)</span>，则通过移项，另一个分量也可以用z的幂级数表示，因此我们用反证法证明如下：</p></blockquote><blockquote><p><strong>证明：</strong>假设x,y都可以用z的幂级数表示，设<spanclass="math inline">\(x=f_1(z)=\sum_\limits{n=0}^\inftya_nz^n\)</span>，<spanclass="math inline">\(y=f_2(z)=\sum_\limits{n=0}^\inftyb_nz^n\)</span>，则<span class="math inline">\(g(z)=|z|^2=z\barz\)</span> 可以表示为<spanclass="math inline">\(g(z)=f_1^2(z)+f_2^2(z)\)</span>，注意到上式对任意<spanclass="math inline">\(z\in\mathbb{C}\)</span>成立，因此幂级数<spanclass="math inline">\(f_1,f_2\)</span>的收敛半径为<spanclass="math inline">\(\infty\)</span>，而且显然它们均不为常数，因此<spanclass="math inline">\(g(z)\)</span>在<spanclass="math inline">\(\mathbb{C}\)</span>上解析，但显然<spanclass="math inline">\(g(z)=|z|^2\)</span>在任何一点都不解析，矛盾！<spanclass="math inline">\(\blacksquare\)</span></p></blockquote><p>推论：利用完全一样的方法可见，x,y不能用任意关于z的解析函数表示</p><figure><img src="/img/erhai.jpg" alt="img" /><figcaption aria-hidden="true">img</figcaption></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>1</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/personal-blog/2022/06/15/hello-world/"/>
+    <url>/personal-blog/2022/06/15/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your veryfirst post. Check <a href="https://hexo.io/docs/">documentation</a> formore info. If you get any problems when using Hexo, you can find theanswer in <ahref="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> oryou can ask me on <ahref="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="quick-start">Quick Start</h2><h3 id="create-a-new-post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <ahref="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="run-server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="generate-static-files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <ahref="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="deploy-to-remote-sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <ahref="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
