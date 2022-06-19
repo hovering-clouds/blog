@@ -20,11 +20,11 @@
     
     <tags>
       
-      <tag>故事</tag>
-      
       <tag>技术</tag>
       
       <tag>web开发</tag>
+      
+      <tag>故事</tag>
       
     </tags>
     
@@ -37,7 +37,7 @@
     <link href="/personal-blog/2022/06/17/%E6%9C%AC%E7%AB%99%E7%82%B9%E6%8A%80%E6%9C%AF%E6%A0%88/"/>
     <url>/personal-blog/2022/06/17/%E6%9C%AC%E7%AB%99%E7%82%B9%E6%8A%80%E6%9C%AF%E6%A0%88/</url>
     
-    <content type="html"><![CDATA[<p>搭建本站点过程中使用的各种轮子</p><span id="more"></span><h2 id="网站前端">网站前端</h2><p>Hexo：快速、简洁且高效的博客框架</p><p><a href="https://hexo.io/zh-cn/docs/">文档 | Hexo</a></p><p>Fluid：一款看着还不错的博客主题</p><p><a href="https://hexo.fluid-dev.com/docs/start/">开始使用 | HexoFluid 用户手册 (fluid-dev.com)</a></p><h2 id="部署">部署</h2><p><a href="https://github.com/">GitHub</a> Pages</p><h2 id="评论区">评论区</h2><p><a href="https://giscus.app/zh-CN">giscus</a>：基于GitHubdiscussion</p><h2 id="图床工作流">图床工作流</h2><pre><code class=" mermaid">flowchart LR1(typora)==自动上传==&gt;2(PicGo)3&#123;&#123;github&#125;&#125;-.同步.-&gt;4&#123;&#123;coding&#125;&#125;5&#123;站点&#125;3 ==提供内容==&gt;56[tinypng]2 -.压缩插件.-&gt; 66 -.返回.-&gt; 22 ==命名&amp;提交==&gt; 31 ==文本==&gt; 34 --分发--&gt; 5</code></pre><h2 id="统计">统计</h2><p>访问量显示：<a href="http://busuanzi.ibruce.info/">不蒜子 -极简网页计数器 (ibruce.info)</a></p><p>后台统计：<ahref="https://tongji.baidu.com/web5/welcome/login">百度统计</a></p><p>运行时长：<ahref="https://hexo.fluid-dev.com/posts/fluid-footer-custom/">Fluid页脚增加网站运行时长</a></p><h2 id="域名">域名</h2><p>域名注册：<a href="https://cloud.tencent.com/">腾讯云</a></p><p>DNS服务：<a href="https://www.dnspod.cn/">DNSPod</a></p><p>备案和审核就费了不少时间。。。</p><h2 id="花里胡哨">花里胡哨</h2><p>下一步打算加一个右下角动态小马，实现方式：</p><ul><li>使用之前的方法，用pt导出的动作流程，但是较为简陋</li><li>使用live2d技术，但是需要一个别人设计好的模型</li><li>自己设计live2d形象（想啥呢。。。）</li></ul><h2 id="成本合计">成本合计</h2><table><thead><tr class="header"><th>项目</th><th>成本</th></tr></thead><tbody><tr class="odd"><td>网站前端</td><td>0</td></tr><tr class="even"><td>部署</td><td>0</td></tr><tr class="odd"><td>评论区</td><td>0</td></tr><tr class="even"><td>图床</td><td>0</td></tr><tr class="odd"><td>统计</td><td>0</td></tr><tr class="even"><td>域名</td><td>约100r</td></tr><tr class="odd"><td>花里胡哨</td><td>未知</td></tr></tbody></table><p>怎么说呢，总体来说还是白嫖的，因为域名这种东西本来也不是必须的，只是这样显得更酷~</p>]]></content>
+    <content type="html"><![CDATA[<p>搭建本站点过程中使用的各种轮子</p><span id="more"></span><h2 id="网站前端">网站前端</h2><p>Hexo：快速、简洁且高效的博客框架</p><p><a href="https://hexo.io/zh-cn/docs/">文档 | Hexo</a></p><p>Fluid：一款看着还不错的博客主题</p><p><a href="https://hexo.fluid-dev.com/docs/start/">开始使用 | HexoFluid 用户手册 (fluid-dev.com)</a></p><h2 id="部署">部署</h2><p><a href="https://github.com/">GitHub</a> Pages</p><h2 id="评论区">评论区</h2><p><a href="https://giscus.app/zh-CN">giscus</a>：基于GitHubdiscussion</p><h2 id="图床工作流">图床工作流</h2><pre><code class=" mermaid">flowchart LR1(typora)==自动上传==&gt;2(PicGo)3&#123;&#123;github&#125;&#125;-.同步.-&gt;4&#123;&#123;coding&#125;&#125;5&#123;站点&#125;3 ==提供内容==&gt;56[tinypng]2 -.压缩插件.-&gt; 66 -.返回.-&gt; 22 ==命名&amp;提交==&gt; 31 ==文本==&gt; 34 --分发--&gt; 5</code></pre><h2 id="统计">统计</h2><p>访问量显示：<a href="http://busuanzi.ibruce.info/">不蒜子 -极简网页计数器 (ibruce.info)</a></p><p>后台统计：<ahref="https://tongji.baidu.com/web5/welcome/login">百度统计</a></p><p>运行时长：<ahref="https://hexo.fluid-dev.com/posts/fluid-footer-custom/">Fluid页脚增加网站运行时长</a></p><h2 id="域名">域名</h2><p>域名注册：<a href="https://cloud.tencent.com/">腾讯云</a></p><p>DNS服务：<a href="https://www.dnspod.cn/">DNSPod</a></p><p>备案和审核就费了不少时间。。。</p><h2 id="花里胡哨">花里胡哨</h2><p>下一步打算加一个右下角动态小马，实现方式：</p><ul><li>使用之前的方法，用pt导出的动作流程图，但是较为简陋</li><li>使用live2d技术，但是需要一个别人设计好的模型</li><li>自己设计live2d形象（想啥呢。。。）</li></ul><p>(2022.6.19更新)</p><p>感谢B站up主 @<ahref="https://space.bilibili.com/175950763">来养一只狗头猫吧</a>无偿提供的萍琪live2d模型，最终选择了上面第二种方式实现了这一功能，当然如果能自己设计的话就好了，这样就可以和之前一样用自己的oc了……可惜本人毫无艺术天分(つ﹏⊂)</p><h2 id="成本合计">成本合计</h2><table><thead><tr class="header"><th>项目</th><th>成本</th></tr></thead><tbody><tr class="odd"><td>网站前端</td><td>0</td></tr><tr class="even"><td>部署</td><td>0</td></tr><tr class="odd"><td>评论区</td><td>0</td></tr><tr class="even"><td>图床</td><td>0</td></tr><tr class="odd"><td>统计</td><td>0</td></tr><tr class="even"><td>域名</td><td>约100r</td></tr><tr class="odd"><td>花里胡哨</td><td>未知</td></tr></tbody></table><p>怎么说呢，总体来说还是白嫖的，因为域名这种东西本来也不是必须的，只是这样显得更酷~</p>]]></content>
     
     
     <categories>
