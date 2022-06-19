@@ -72,7 +72,7 @@
   <script  src="/blog/js/utils.js" ></script>
   <script  src="/blog/js/color-schema.js" ></script>
 
-  
+  <script src="/blog/js/live2dcubismcore.js"></script><script src="/blog/js/bundle.js"></script>
 <meta name="generator" content="Hexo 5.4.2"></head>
 
 
@@ -290,7 +290,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/personal-blog/js/duration.js"></script> </div> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/blog/js/duration.js"></script> </div> 
     </div>
   
   
@@ -384,7 +384,15 @@
 <script  src="/blog/js/boot.js" ></script>
 
 
-  
+  <canvas id="live2d" width="300" height="300" class="live2d"
+style="position: fixed; opacity: 0.8; left: -80px; bottom: -70px; z-index: 99999; pointer-events: none;">
+</canvas>
+<script type="text/javascript">
+var resourcesPath = 'https://cdn.jsdelivr.net/gh/hovering-clouds/blog-assets@v1.4/'; // 指定资源文件（模型）保存的路径，使用github的release版本，路径如下https://cdn.jsdelivr.net/gh/用户/库@版本号/资源路径
+var backImageName = ''; // 指定背景图片 ,默认为空
+var modelDir = ['pp']; // 指定需要加载的模型
+initDefine(resourcesPath, backImageName, modelDir); // 初始化模型
+</script>
 
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
