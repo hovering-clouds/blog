@@ -83,7 +83,16 @@
   <script  src="/blog/js/utils.js" ></script>
   <script  src="/blog/js/color-schema.js" ></script>
 
-  <script src="/blog/js/live2dcubismcore.js"></script><script src="/blog/js/bundle.js"></script>
+  <!--因为博客主题提供的百度统计接口似乎用不了，所以就自己注入一份了-->
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b13d210bdc187b90bf39b1bfea523887";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();s
+</script><script src="/blog/js/live2dcubismcore.js"></script><script src="/blog/js/bundle.js"></script>
 <meta name="generator" content="Hexo 5.4.2"></head>
 
 
