@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>建站过程6-左下角小马</title>
+    <link href="/blog/2022/06/21/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B6-%E5%B7%A6%E4%B8%8B%E8%A7%92%E5%B0%8F%E9%A9%AC/"/>
+    <url>/blog/2022/06/21/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B6-%E5%B7%A6%E4%B8%8B%E8%A7%92%E5%B0%8F%E9%A9%AC/</url>
+    
+    <content type="html"><![CDATA[<p>本文将介绍页面左下角动态小马形象的实现方法</p><span id="more"></span><h2 id="live2d技术简介">live2d技术简介</h2><p>Live2D是一种应用于电子游戏的绘图渲染技术，该技术由日本Cybernoids公司（现已更名为Live2D）开发。通过一系列的连续图像和人物建模来生成一种类似三维模型的二维图像，对于以动画风格为主的游戏来说非常有用。</p><p>简单来说，画师只需要绘制一张原画，然后将身体、五官、发型、服装等2D图片放到全3D的模型模板上。这样的成品将保留2D手绘的精细，同时在小范围旋转视角上也能做到毫无违和感。这一技术目前的缺点在于无法实现复杂图形、人物的大幅旋转，开发商正在设法解决这一问题。</p><p>*以上介绍摘自：<a href="https://zhuanlan.zhihu.com/p/350053207">live2D技术：让2D角色动起来的障眼法 - 知乎 (zhihu.com)</a></p><p>按我的理解，就是不需要3D建模，只需要一张图片素材，然后给各个身体部位加上一些平移、变形等变换，就可以模拟出栩栩如生的动态效果，事实上很多同学喜欢的二次元风格游戏，以及B站随处可见的vtuber，它们用的都是这一技术。</p><p>有兴趣创造自己的live2d形象的读者可以去看看<ahref="https://www.live2d.com/zh-CHS/">Live2D Cubism</a>这款软件，有免费版本可以使用，以及付费的Pro版，官网上也有很多教程和文档，但是很多都是日语的。（我玩了一晚上，感觉还是好复杂……）</p><figure><imgsrc="https://www.live2d.com/wp/wp-content/themes/cubism_wpml/img/about-img_07.jpg"alt="来自live2d.com" /><figcaption aria-hidden="true">来自live2d.com</figcaption></figure><h2 id="模型获得">模型获得</h2><p>网上各种live2d模型挺丰富的，不过用在博客上的似乎多是官方给的样例，毕竟自己整模型以及重新搞好相关代码，还是非常麻烦的。在官方样例中，我比较喜欢那只装在碗里的小狗，还有那两只猫看起来也还好。不过其实我还是更想要把自己oc放在主页上……</p><p>反正不管怎么说，最后还是在B站up主 @<ahref="https://space.bilibili.com/175950763">来养一只狗头猫吧</a>这里找来了一只看起来很可爱的Pinkie，所以我就这样用啦，非常感谢他愿意给我使用！</p><h2 id="配置">配置</h2><p>好了，让我们进入正题吧，现在我们有了合适的模型，该如何部署到自己的站点呢？为了这一块，我可是费了老大的劲。首先在github上找了几十个仓库，结果试来试去没一个成功的。后来去看别人博客，也都是众说纷纭，让我眼花缭乱。长话短说，在经历了漫长的搜索与试错，我终于在某篇文章里找到了一个教程。果然，对于我这种懒惰的人来说，授之以🎣不如授之以🐟[doge]，这篇文章直接就说，给你这两个文件，你这样这样，再那样那样，然后就好了。照着做了一遍，稍稍修改了些，总算成功了~</p><h3 id="step1">step1</h3><p>将live2d模型文件放在远程服务器上</p><p>注意事项：</p><ul><li>不能放在本地，因为浏览器有烦人的跨域访问限制</li><li>不能放在github仓库，因为未知的原因，github的raw-content链接在脚本里没法直接加载</li></ul><p>正确方法：放在自己的服务器上，或者用githubrelease后，使用链接“https://cdn.jsdelivr.net/gh/用户/库@版本号/资源路径”访问你已经发布的文件</p><h3 id="step2">step2</h3><p>获得用来解析live2d模型的js脚本：</p><p><ahref="https://raw.githubusercontent.com/hovering-clouds/blog/gh-pages/js/live2dcubismcore.js">live2dcubismcore.js</a></p><p><ahref="https://raw.githubusercontent.com/hovering-clouds/blog/gh-pages/js/bundle.js">bundle.js</a></p><h3 id="step3">step3</h3><p>在你的博客页面上插入如下代码：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;live2d&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;300&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;300&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;live2d&quot;</span></span><br><span class="hljs-tag"><span class="hljs-attr">style</span>=<span class="hljs-string">&quot;position: fixed; opacity: 0.8; left: -80px; bottom: -70px; z-index: 99999; pointer-events: none;&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript"><span class="hljs-keyword">var</span> resourcesPath = <span class="hljs-string">&#x27;https://cdn.jsdelivr.net/gh/用户/库@版本号/资源路径&#x27;</span>; <span class="hljs-comment">// 指定资源文件（模型）保存的路径，使用github的release版本，路径如下https://cdn.jsdelivr.net/gh/用户/库@版本号/资源路径</span></span><br><span class="language-javascript"><span class="hljs-keyword">var</span> backImageName = <span class="hljs-string">&#x27;&#x27;</span>; <span class="hljs-comment">// 指定背景图片 ,默认为空</span></span><br><span class="language-javascript"><span class="hljs-keyword">var</span> modelDir = [<span class="hljs-string">&#x27;&#x27;</span>]; <span class="hljs-comment">// 指定需要加载的模型，</span></span><br><span class="language-javascript"><span class="hljs-title function_">initDefine</span>(resourcesPath, backImageName, modelDir); <span class="hljs-comment">// 初始化模型</span></span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure><p>为了免除不必要的麻烦，建议按照下面的文件目录，存放在github仓库的根目录：</p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs 1c">root<br><span class="hljs-string">|--model_name</span><br>   <span class="hljs-string">|--xxx.json</span><br>   <span class="hljs-string">|--xxx.json</span><br>   <span class="hljs-string">|--xxx.moc3</span><br>   <span class="hljs-string">|--(more)</span><br></code></pre></td></tr></table></figure><h3 id="step4">step4</h3><p>刷新博客，在浏览器上查看是否成功显示live2d形象，可以开浏览器调试工具查看详细信息。如果你看到了图中这几行消息，那么恭喜你成功了！</p><figure><imgsrc="https://hovering-clouds.coding.net/p/pic-host/d/blog-comment/git/raw/main/img/2022/06/20/00-22-34.713-image-20220620002230688.png"alt="示意图" /><figcaption aria-hidden="true">示意图</figcaption></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>存档-record</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>教程</tag>
+      
+      <tag>技术</tag>
+      
+      <tag>web开发</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>站点发展历程</title>
     <link href="/blog/2022/06/18/%E7%AB%99%E7%82%B9%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/"/>
     <url>/blog/2022/06/18/%E7%AB%99%E7%82%B9%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/</url>
@@ -20,9 +49,9 @@
     
     <tags>
       
-      <tag>web开发</tag>
-      
       <tag>技术</tag>
+      
+      <tag>web开发</tag>
       
       <tag>故事</tag>
       
@@ -49,11 +78,11 @@
     
     <tags>
       
-      <tag>web开发</tag>
-      
       <tag>教程</tag>
       
       <tag>技术</tag>
+      
+      <tag>web开发</tag>
       
     </tags>
     
