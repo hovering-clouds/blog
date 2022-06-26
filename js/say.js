@@ -1,3 +1,5 @@
+export {randomBoolean,randomChoose,randomNum}
+
 // https://zeit.co/blog/async-and-await
 function sleep (time) {
     return new Promise((resolve) => setTimeout(resolve, time));
