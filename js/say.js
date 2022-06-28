@@ -11,7 +11,11 @@ const cvs = document.querySelector("#live2d");
 const box = document.querySelector("#textbox");
 const text = document.querySelector("#saytext span");
 const textbar = document.querySelector("#saytext");
+const closebtn = document.querySelector("#cvsclose");
+const svg = document.querySelectorAll("#cvsclose svg");
 const url = "/blog/js/saying.json";
+const visib = ["visible","hidden"]
+let svgind = 0;
 let articles = null;
 let timer = null;//用于取消延迟任务的ID值
 let hover = false;
@@ -21,6 +25,14 @@ function say_init(){
     cvs.addEventListener("click",handler_say);
     textbar.addEventListener("mouseenter",handler_mouseenter);
     textbar.addEventListener("mouseleave",handler_mouseleave);
+    closebtn.addEventListener("click",cvsclose);
+    closebtn.addEventListener("mouseenter",(e)=>{
+        closebtn.style.opacity = 1.0;
+    });
+    closebtn.addEventListener("mouseleave",(e)=>{
+        closebtn.style.opacity = 0.5;
+    });
+    closebtn.removeChild(svg[1]);//删除第二个图标
     // 载入json
     var request = new XMLHttpRequest();
     // 设置请求方法与路径
@@ -61,6 +73,14 @@ function change_content(group) {
         text.appendChild(anchor);
     }
 
+}
+
+function cvsclose(event) {
+    svgind = 1-svgind;
+    cvs.style.visibility = visib[svgind];
+    box.style.visibility = visib[svgind];
+    closebtn.removeChild(closebtn.lastElementChild);
+    closebtn.appendChild(svg[svgind]);
 }
 
 function handler_say(event) {

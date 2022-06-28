@@ -4,6 +4,64 @@
   
   
   <entry>
+    <title>建站过程3-图床配置</title>
+    <link href="/blog/2022/06/28/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B3-%E5%9B%BE%E5%BA%8A%E9%85%8D%E7%BD%AE/"/>
+    <url>/blog/2022/06/28/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B3-%E5%9B%BE%E5%BA%8A%E9%85%8D%E7%BD%AE/</url>
+    
+    <content type="html"><![CDATA[<p>基于github/coding+picgo的图床实现</p><span id="more"></span><h2 id="步骤">步骤</h2><ol type="1"><li>创建github仓库作为图床；</li><li>配置coding项目作为同步分发；</li><li>配置picgo作为图床客户端；</li><li>配置typora从而将picgo集成到写作环境中；</li></ol><h2 id="图床配置">图床配置</h2><p>此部分想法来源于<a href="https://www.myql.xyz/post/92e90c46/">Coding图床方案 -暮雨千泷</a>，作用是增加国内访问速度，详细教程请参见原文。</p><h2 id="picgo配置">Picgo配置</h2><ol type="1"><li><p>安装 <ahref="https://picgo.github.io/PicGo-Doc/zh/">PicGo</a></p></li><li><p>配置github图床，详细教程参见<ahref="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github图床">配置手册| PicGo</a></p></li><li><p>安装插件，此处我使用了compress和rename-file两个插件，前者用于自动压缩图片，后者用于上传时按照指定格式自动重命名，这样方便图床的管理；</p><p><ahref="https://github.com/JuZiSang/picgo-plugin-compress#readme">picgo-plugin-compress</a></p><p><ahref="https://github.com/liuwave/picgo-plugin-rename-file#readme">picgo-plugin-rename-file</a></p></li></ol><h2 id="typora配置">typora配置</h2><p>在偏好设置中根据自己的需求修改这些选项即可</p><figure><imgsrc="https://hovering-clouds.coding.net/p/pic-host/d/blog-comment/git/raw/main/img/2022/06/26/16-20-17.245-image-20220626162013685.png"alt="偏好设置" /><figcaption aria-hidden="true">偏好设置</figcaption></figure><h2 id="最终效果">最终效果</h2><p>无论是自己通过md语法插入图片，还是拖动图片进入typora窗口，甚至是将剪贴板中的图片<code>ctrl+v</code>贴在想要的位置，typora都会自动通过picgo上传图片，同时将原有图片路径换成上传后的url，非常便利</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>存档-record</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>web开发</tag>
+      
+      <tag>教程</tag>
+      
+      <tag>技术</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>建站过程2-站点部署</title>
+    <link href="/blog/2022/06/27/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B2-%E7%AB%99%E7%82%B9%E9%83%A8%E7%BD%B2/"/>
+    <url>/blog/2022/06/27/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B2-%E7%AB%99%E7%82%B9%E9%83%A8%E7%BD%B2/</url>
+    
+    <content type="html"><![CDATA[<p>在本系列上一篇文章中，我们已经用hexo在本地搭建了一个站点。但是要想让你的网站被他人访问到，还需要将它发布出去。此处我们将使用githubpages发布静态的个人站点。</p><span id="more"></span><h2 id="创建仓库">创建仓库</h2><ol type="1"><li><p>注册一个github账号（然后你就可以在我的博客评论区发言了！）</p></li><li><p>新建一个仓库</p><figure><imgsrc="https://hovering-clouds.coding.net/p/pic-host/d/blog-comment/git/raw/main/img/2022/06/26/13-43-38.257-image-20220626134332227.png"alt="新建仓库" /><figcaption aria-hidden="true">新建仓库</figcaption></figure></li></ol><h2 id="发布静态文件">发布静态文件</h2><p>运行<code>$ hexo g</code>生成站点静态文件，它们存放在博客文件夹根目录的<code>public</code>文件夹中；</p><figure><imgsrc="https://hovering-clouds.coding.net/p/pic-host/d/blog-comment/git/raw/main/img/2022/06/26/13-47-35.310-image-20220626134730617.png"alt="静态文件夹" /><figcaption aria-hidden="true">静态文件夹</figcaption></figure><p>然后将这个文件夹里面的内容上传至之前建立的仓库中</p><figure><imgsrc="https://hovering-clouds.coding.net/p/pic-host/d/blog-comment/git/raw/main/img/2022/06/26/13-51-04.310-image-20220626135100714.png"alt="上传" /><figcaption aria-hidden="true">上传</figcaption></figure><p>成功后的效果图类似这样：</p><figure><imgsrc="https://hovering-clouds.coding.net/p/pic-host/d/blog-comment/git/raw/main/img/2022/06/26/13-53-01.659-image-20220626135257767.png"alt="效果图" /><figcaption aria-hidden="true">效果图</figcaption></figure><p>最后使用github page发布站点：</p><figure><imgsrc="https://hovering-clouds.coding.net/p/pic-host/d/blog-comment/git/raw/main/img/2022/06/26/14-01-28.424-image-20220626140122983.png"alt="发布" /><figcaption aria-hidden="true">发布</figcaption></figure><h2 id="一键部署">一键部署</h2><p>如果每次修改文章都要这样重新上传，真是太麻烦了，我们可以通过配置hexo的<code>config.yml</code>文件从而实现一键部署；</p><p>找到这个文件的<code>deploy</code>部分，修改为以下内容：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Deployment</span><br><span class="hljs-comment">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span> <br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">https://github.com/&#123;用户名&#125;/&#123;仓库名&#125;.git</span> <br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">gh-pages</span> <br></code></pre></td></tr></table></figure><p>之后只需要在命令行中运行<code>hexo d</code>即可实现上传到github仓库，当然在此之前需要重新运行<code>hexo g</code>生成静态文件</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>存档-record</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>web开发</tag>
+      
+      <tag>教程</tag>
+      
+      <tag>技术</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>建站过程1-博客框架</title>
     <link href="/blog/2022/06/26/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B1-%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/"/>
     <url>/blog/2022/06/26/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B1-%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/</url>
