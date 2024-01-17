@@ -1,0 +1,13 @@
+canvas.live2d {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    opacity: 75%;
+}
+
+@media (max-width: 600px) {
+    canvas.live2d {
+        width: 200px;
+        height: 200px;
+    }
+}
