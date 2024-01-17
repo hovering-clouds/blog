@@ -11249,6 +11249,7 @@ var LAppTextureManager = (function () {
                 return state_1.value;
         }
         var img = new Image();
+        img.crossOrigin = "Anonymous";
         img.onload = function () {
             var tex = lappdelegate_1.gl.createTexture();
             lappdelegate_1.gl.bindTexture(lappdelegate_1.gl.TEXTURE_2D, tex);
