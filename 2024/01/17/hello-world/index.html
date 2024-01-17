@@ -11,7 +11,7 @@
   
   <title>
     
-      Hello World 
+      新的开始！ 
       
       
     
@@ -46,17 +46,26 @@
   <!-- fancybox -->
   <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
   <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/blog/js/fancybox.js"></script>
+
+  
+  <!-- analysis -->
+  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
 
   <!-- inject -->
   
     
 <link rel="stylesheet" href="/blog/css/live2d.css">
+<link rel="stylesheet" href="/blog/css/loading.css">
 
   
   
     
-<script src="https://cdn.jsdelivr.net/gh/hovering-clouds/blog-assets@v1.8/script/live2dcubismcore.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/hovering-clouds/blog-assets@v1.8/script/bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hovering-clouds/blog-assets@v1.9/script/live2dcubismcore.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hovering-clouds/blog-assets@v1.9/script/bundle.js"></script>
 <script src="/blog/js/load.js"></script>
 
   
@@ -100,44 +109,66 @@
         <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
 <!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- LaTex Display -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    }
-  };
-</script>
+<!-- Math Display -->
+ 
 
 <div class="post">
   <h3 class="date">
     Jan 17, 2024
+    
+      <span id="busuanzi_container_page_pv" style='display:none'> &nbsp;&nbsp;Views: <span id="busuanzi_value_site_pv"></span></span>
+      
   </h3>
   <h1>
-    Hello World
+    新的开始！
   </h1>
   <div class="content markdown-body">
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <h2 id="⭐网站历史">⭐网站历史</h2>
+<ul>
+<li>
+<p>2021年10月，得知github上可以部署静态网站，于是通过纯手撸html得到了第一个粗糙的主页；</p>
+</li>
+<li>
+<p>2022年寒假期间，自学了一点三大件，通过纯手撸html+css+js得到了看起来更美观的主页（奈何本人色彩搭配以及排版能力啥的不太行，所以可能从美学的角度来看还是不太好）；</p>
+</li>
+<li>
+<p>2022年暑假期末之后，懂得了用轮子的重要性，接触了hexo博客框架，选择了fluid主题，不得不说美观程度一下子起飞了，可惜后来学业繁忙也没在上面放什么文章再后。来图床都挂了，文章里面只剩下失效的超链接；</p>
+</li>
+<li>
+<p>今年寒假期末之后，心血来潮想要恢复一下这个站点。主要是有的时候想要写一些带公式的文章，其它平台或多或少有些不满意之处，于是耗费了些时间重建了一下主页。不过这次换了一个更加简洁的主题，一方面不会过于大众化，另一方面也不用担心图床挂掉导致网页变丑陋。</p>
+</li>
+<li>
+<p>经过两天的调试，新一版本的个人博客终于完工了。</p>
+</li>
+</ul>
+<h2 id="🌟本次更新">🌟本次更新</h2>
+<ul>
+<li>
+<p>去除了上一个主题中大部分华丽的内容：例如巨大的头图、炫酷的文字特效、留言板、繁复的标签分类、字数统计、友情链接……</p>
+</li>
+<li>
+<p>更换了一个小众的极简风格，修改了一些小地方以满足自己的需求（比如原主题居然只能放根目录下）</p>
+</li>
+<li>
+<p>一切以简洁至上：除了文章以外只保留一个按照时间顺序列出文章的archive页面。保留网站运行时长是因为想要延续这个传统。</p>
+</li>
+<li>
+<p>更换了左下角的live2d模型：相比之前增加了一些稍复杂的表情互动，可以通过点击触发；仍然保留了光标追踪功能，只不过追踪范围仅限canvas区域；触屏设备的相应交互方式为点击（更换表情）和拖动（视线跟随）；由于之前直接拿的别人编译好的脚本不支持表情，这次直接去下了Cubism的web SDK，读了一整天代码找到了需要修改的地方，终于适配了自己的模型。</p>
+</li>
+<li>
+<p>之前的站点仍然保留，只不过移动到别的地方了，可以通过主页头像下方的🔗图标访问（失效的图片链接还有待恢复）；</p>
+</li>
+</ul>
+<h2 id="✨-未来展望">✨ 未来展望</h2>
+<p>可能以后这里主要放些学习笔记和内心随感之类的。应该不会有太多图片，毕竟简洁至上。主要是之前有同学问我为什么要把一些学习随笔放QQ空间里，想了想确实不支持公式输入挺难受的，所以不如把个人博客重新启用一下，而且电脑上写着确实更舒服一些。当然有些那种突然的emo小情绪适合在深夜发电的还是会继续放手机端。</p>
+<p>欢迎新老朋友前来捧场！</p>
 
   </div>
   
     
         
+          <a id="newer" class="blog-nav" href="/blog/2024/01/17/%E5%A4%8D%E4%B9%A0%E5%85%AC%E5%BC%8F/">&lt;&nbsp;NEWER</a>
+          
             
 </div>
         <div class="footer">
@@ -154,6 +185,13 @@
         
     </div>
   
+  <!-- analysis -->
+  
+  <!-- duration -->
+  <div id="timeDate"></div>
+  
+<script src="/blog/js/duration.js"></script>
+
 </div>
 
       </div>

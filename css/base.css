@@ -17,6 +17,20 @@ body.hidden {
   margin: 0 auto;
 }
 
+#timeDate {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#busuanzi_container_site_pv {
+  font-size: 1.2rem;
+}
+
+#busuanzi_container_page_pv {
+  color: #666;
+}
+
+
 /*控制整个滚动条*/
 
 ::-webkit-scrollbar {
@@ -239,6 +253,7 @@ a:hover {
 .footer {
   padding-top: 15px;
   font-size: 1.2rem;
+  text-align: center;
   color: #aaa;
 }
 
