@@ -11,7 +11,9 @@
   
   <title>
     
-      HC&#39;s blog
+      archive_a: 2023 
+      
+      
     
   </title>
 
@@ -29,10 +31,6 @@
 <link rel="stylesheet" href="/blog/css/common.css">
 <link rel="stylesheet" href="/blog/iconfont/iconfont.css">
 
-
-  
-    
-<link rel="stylesheet" href="/blog/css/index.css">
 
   
 
@@ -104,148 +102,245 @@
 
 
       <div class="main">
-        <div>
-  <ul>
-    <!-- 遍历渲染文章 -->
+        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+
+<!-- last: 按年份把文章分组，当前遍历到的年份 -->
+<!-- now: 当前遍历到的文章的发布年份 -->
+
+<div class="container archives">
+  <div class="post-list">
     
-    <li>
-      <h3>Jan 17, 2024</h3>
-      <h2>
-        <a href="/blog/2024/01/17/hello-world/">
-          
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2024</span>
+          </h2>
+        </div>
+      
+      <div class="post-item" title="新的开始！">
+        <div class="time-m-d">01-17</div>
+        <div class="title">
+          <a href="/blog/2024/01/17/hello-world/">
             
               <span>新的开始！</span>
             
-          
-        </a>
-      </h2>
-    </li>
+          </a>
+        </div>
+      </div>
     
-    <li>
-      <h3>Jan 04, 2024</h3>
-      <h2>
-        <a href="/blog/2024/01/04/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94240104/">
-          
+      <div class="post-item" title="学习随笔18-电子云形状与球谐函数">
+        <div class="time-m-d">01-04</div>
+        <div class="title">
+          <a href="/blog/2024/01/04/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94240104/">
             
               <span>学习随笔18-电子云形状与球谐函数</span>
             
-          
-        </a>
-      </h2>
-    </li>
+          </a>
+        </div>
+      </div>
     
-    <li>
-      <h3>Dec 18, 2023</h3>
-      <h2>
-        <a href="/blog/2023/12/18/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94231218/">
-          
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2023</span>
+          </h2>
+        </div>
+      
+      <div class="post-item" title="学习随笔17-Wasserstein距离与最优输运问题">
+        <div class="time-m-d">12-18</div>
+        <div class="title">
+          <a href="/blog/2023/12/18/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94231218/">
             
               <span>学习随笔17-Wasserstein距离与最优输运问题</span>
             
-          
-        </a>
-      </h2>
-    </li>
+          </a>
+        </div>
+      </div>
     
-    <li>
-      <h3>Oct 21, 2023</h3>
-      <h2>
-        <a href="/blog/2023/10/21/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94231021/">
-          
+      <div class="post-item" title="学习随笔16-信封问题">
+        <div class="time-m-d">10-21</div>
+        <div class="title">
+          <a href="/blog/2023/10/21/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94231021/">
             
               <span>学习随笔16-信封问题</span>
             
-          
-        </a>
-      </h2>
-    </li>
+          </a>
+        </div>
+      </div>
     
-    <li>
-      <h3>Sep 30, 2023</h3>
-      <h2>
-        <a href="/blog/2023/09/30/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230930/">
-          
+      <div class="post-item" title="学习随笔15-高斯的故事">
+        <div class="time-m-d">09-30</div>
+        <div class="title">
+          <a href="/blog/2023/09/30/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230930/">
             
               <span>学习随笔15-高斯的故事</span>
             
-          
-        </a>
-      </h2>
-    </li>
+          </a>
+        </div>
+      </div>
     
-    <li>
-      <h3>Sep 29, 2023</h3>
-      <h2>
-        <a href="/blog/2023/09/29/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230929/">
-          
+      <div class="post-item" title="学习随笔14-球体的体积">
+        <div class="time-m-d">09-29</div>
+        <div class="title">
+          <a href="/blog/2023/09/29/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230929/">
             
               <span>学习随笔14-球体的体积</span>
             
-          
-        </a>
-      </h2>
-    </li>
+          </a>
+        </div>
+      </div>
     
-    <li>
-      <h3>Sep 27, 2023</h3>
-      <h2>
-        <a href="/blog/2023/09/27/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230927/">
-          
+      <div class="post-item" title="学习随笔13-覆盖的矛盾">
+        <div class="time-m-d">09-27</div>
+        <div class="title">
+          <a href="/blog/2023/09/27/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230927/">
             
               <span>学习随笔13-覆盖的矛盾</span>
             
-          
-        </a>
-      </h2>
-    </li>
+          </a>
+        </div>
+      </div>
     
-    <li>
-      <h3>Sep 16, 2023</h3>
-      <h2>
-        <a href="/blog/2023/09/16/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230916/">
-          
+      <div class="post-item" title="学习随笔12-量子纠缠的数学解释">
+        <div class="time-m-d">09-16</div>
+        <div class="title">
+          <a href="/blog/2023/09/16/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230916/">
             
               <span>学习随笔12-量子纠缠的数学解释</span>
             
-          
-        </a>
-      </h2>
-    </li>
+          </a>
+        </div>
+      </div>
     
-    <li>
-      <h3>May 10, 2023</h3>
-      <h2>
-        <a href="/blog/2023/05/10/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230510-2/">
-          
+      <div class="post-item" title="学习随笔11-特征方程解法">
+        <div class="time-m-d">05-10</div>
+        <div class="title">
+          <a href="/blog/2023/05/10/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230510-2/">
             
               <span>学习随笔11-特征方程解法</span>
             
-          
-        </a>
-      </h2>
-    </li>
+          </a>
+        </div>
+      </div>
     
-    <li>
-      <h3>May 10, 2023</h3>
-      <h2>
-        <a href="/blog/2023/05/10/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230510/">
-          
+      <div class="post-item" title="学习随笔10-同构之美">
+        <div class="time-m-d">05-10</div>
+        <div class="title">
+          <a href="/blog/2023/05/10/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230510/">
             
               <span>学习随笔10-同构之美</span>
             
-          
-        </a>
-      </h2>
-    </li>
+          </a>
+        </div>
+      </div>
     
-  </ul>
-  
-  <nav class="post-navigation">
+      <div class="post-item" title="学习随笔9-自指悖论的规避">
+        <div class="time-m-d">04-05</div>
+        <div class="title">
+          <a href="/blog/2023/04/05/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230405/">
+            
+              <span>学习随笔9-自指悖论的规避</span>
+            
+          </a>
+        </div>
+      </div>
     
+      <div class="post-item" title="学习随笔8-“纯杂理论”">
+        <div class="time-m-d">03-12</div>
+        <div class="title">
+          <a href="/blog/2023/03/12/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230312/">
+            
+              <span>学习随笔8-“纯杂理论”</span>
+            
+          </a>
+        </div>
+      </div>
     
-      <a id="next" class="index-nav" href="/blog/page/2/">OLDER&nbsp;&gt;</a>
+      <div class="post-item" title="学习随笔7-无歧义与无前缀编码">
+        <div class="time-m-d">03-08</div>
+        <div class="title">
+          <a href="/blog/2023/03/08/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230308/">
+            
+              <span>学习随笔7-无歧义与无前缀编码</span>
+            
+          </a>
+        </div>
+      </div>
     
-  </nav>
+      <div class="post-item" title="学习随笔6-ML课堂随感">
+        <div class="time-m-d">03-04</div>
+        <div class="title">
+          <a href="/blog/2023/03/04/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230304/">
+            
+              <span>学习随笔6-ML课堂随感</span>
+            
+          </a>
+        </div>
+      </div>
+    
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2022</span>
+          </h2>
+        </div>
+      
+      <div class="post-item" title="学习随笔5-饱和烷烃同分异构体计数">
+        <div class="time-m-d">06-14</div>
+        <div class="title">
+          <a href="/blog/2022/06/14/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94220614/">
+            
+              <span>学习随笔5-饱和烷烃同分异构体计数</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="学习随笔4-z=x+iy">
+        <div class="time-m-d">06-13</div>
+        <div class="title">
+          <a href="/blog/2022/06/13/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94220613/">
+            
+              <span>学习随笔4-z=x+iy</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="学习随笔3-紧性与完备性">
+        <div class="time-m-d">06-01</div>
+        <div class="title">
+          <a href="/blog/2022/06/01/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94220601/">
+            
+              <span>学习随笔3-紧性与完备性</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="学习随笔2-球盒模型">
+        <div class="time-m-d">05-15</div>
+        <div class="title">
+          <a href="/blog/2022/05/15/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94220515/">
+            
+              <span>学习随笔2-球盒模型</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="学习随笔1-概率论习题一则">
+        <div class="time-m-d">05-13</div>
+        <div class="title">
+          <a href="/blog/2022/05/13/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94220513/">
+            
+              <span>学习随笔1-概率论习题一则</span>
+            
+          </a>
+        </div>
+      </div>
+    
+  </div>
 </div>
 
         <div class="footer">

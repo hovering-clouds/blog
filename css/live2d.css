@@ -5,6 +5,10 @@ canvas.live2d {
     opacity: 75%;
 }
 
+#newer {
+    z-index: 1;
+}
+
 @media (max-width: 600px) {
     canvas.live2d {
         width: 200px;

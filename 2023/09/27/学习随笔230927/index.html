@@ -11,7 +11,9 @@
   
   <title>
     
-      HC&#39;s blog
+      学习随笔13-覆盖的矛盾 
+      
+      
     
   </title>
 
@@ -31,10 +33,10 @@
 
 
   
-    
-<link rel="stylesheet" href="/blog/css/index.css">
 
   
+    
+<link rel="stylesheet" href="/blog/css/post.css">
 
   
 
@@ -104,150 +106,41 @@
 
 
       <div class="main">
-        <div>
-  <ul>
-    <!-- 遍历渲染文章 -->
-    
-    <li>
-      <h3>Jan 17, 2024</h3>
-      <h2>
-        <a href="/blog/2024/01/17/hello-world/">
-          
-            
-              <span>新的开始！</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jan 04, 2024</h3>
-      <h2>
-        <a href="/blog/2024/01/04/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94240104/">
-          
-            
-              <span>学习随笔18-电子云形状与球谐函数</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Dec 18, 2023</h3>
-      <h2>
-        <a href="/blog/2023/12/18/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94231218/">
-          
-            
-              <span>学习随笔17-Wasserstein距离与最优输运问题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Oct 21, 2023</h3>
-      <h2>
-        <a href="/blog/2023/10/21/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94231021/">
-          
-            
-              <span>学习随笔16-信封问题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Sep 30, 2023</h3>
-      <h2>
-        <a href="/blog/2023/09/30/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230930/">
-          
-            
-              <span>学习随笔15-高斯的故事</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Sep 29, 2023</h3>
-      <h2>
-        <a href="/blog/2023/09/29/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230929/">
-          
-            
-              <span>学习随笔14-球体的体积</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Sep 27, 2023</h3>
-      <h2>
-        <a href="/blog/2023/09/27/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230927/">
-          
-            
-              <span>学习随笔13-覆盖的矛盾</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Sep 16, 2023</h3>
-      <h2>
-        <a href="/blog/2023/09/16/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230916/">
-          
-            
-              <span>学习随笔12-量子纠缠的数学解释</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 10, 2023</h3>
-      <h2>
-        <a href="/blog/2023/05/10/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230510-2/">
-          
-            
-              <span>学习随笔11-特征方程解法</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 10, 2023</h3>
-      <h2>
-        <a href="/blog/2023/05/10/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230510/">
-          
-            
-              <span>学习随笔10-同构之美</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-  
-  <nav class="post-navigation">
-    
-    
-      <a id="next" class="index-nav" href="/blog/page/2/">OLDER&nbsp;&gt;</a>
-    
-  </nav>
-</div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
+<!-- Math Display -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
+ 
+
+<div class="post">
+  <h3 class="date">
+    Sep 27, 2023
+    
+      <span id="busuanzi_container_page_pv" style='display:none'> &nbsp;&nbsp;Views: <span id="busuanzi_value_page_pv"></span></span>
+      
+  </h3>
+  <h1>
+    学习随笔13-覆盖的矛盾
+  </h1>
+  <div class="content markdown-body">
+    <h2 id="问题">问题</h2>
+<p>刚刚写实变作业的时候一直受到一个奇怪想法的困扰。把[0,1]上的有理数排成一列，然后依次用长度为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>ϵ</mi><msup><mn>2</mn><mi>n</mi></msup></mfrac></mrow><annotation encoding="application/x-tex">\frac\epsilon{2^n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0404em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5935em;"><span style="top:-2.786em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ϵ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>的邻域覆盖它们，这样得到了一列开区间覆盖了[0,1]上的所有有理数，总长度为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">ϵ</span></span></span></span>。考虑到有理数在[0,1]上稠密，因此这些区间应该覆盖了整个[0,1]，结果我们使用了总长eps的区间覆盖了长度为1的区间，看起来就很矛盾。虽然有时候反类似的直觉的现象确实存在，比如可以建立一个从长度为0的Cantor集到长度为1的[0,1]区间的一一映射。但是这里用总长<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">ϵ</span></span></span></span>的可数个小区间覆盖了[0,1]，违反了测度的可加性，所以绝对有问题。</p>
+<h2 id="原因">原因</h2>
+<p>由于脑子比较迟钝，我过了好一会儿才反应过来上面推导的错误。问题在于有理数的稠密性并不能推出覆盖有理数的小区间就能覆盖所有无理数。对于某个无理数，尽管存在一列有理数逼近它，然而对应的小区间可能一直比离那个无理数的距离小，所以总是覆盖不了。</p>
+<p>可见直觉有的时候还是靠不住。</p>
+
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/blog/2023/09/16/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230916/">OLDER&nbsp;&gt;</a>
+      
+        
+          <a id="newer" class="blog-nav" href="/blog/2023/09/29/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230929/">&lt;&nbsp;NEWER</a>
+          
+            
+</div>
         <div class="footer">
   
     <div class="footer-more">
@@ -263,11 +156,6 @@
     </div>
   
   <!-- analysis -->
-  
-    <div id="busuanzi_container_site_pv" style="display: none;">
-      Total views: <span id="busuanzi_value_site_pv"></span>. 
-      Total visitors: <span id="busuanzi_value_site_uv"></span>. 
-    </div>
   
   <!-- duration -->
   <div id="timeDate"></div>
