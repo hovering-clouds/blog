@@ -11,7 +11,7 @@
   
   <title>
     
-      新的开始！ 
+      archive_a: 2024/2 
       
       
     
@@ -33,10 +33,6 @@
 
 
   
-
-  
-    
-<link rel="stylesheet" href="/blog/css/post.css">
 
   
 
@@ -106,73 +102,258 @@
 
 
       <div class="main">
-        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
-<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
 
-<!-- Math Display -->
- 
+<!-- last: 按年份把文章分组，当前遍历到的年份 -->
+<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="post">
-  <h3 class="date">
-    Jan 17, 2024
+<div class="container archives">
+  <div class="post-list">
     
-      <span id="busuanzi_container_page_pv" style='display:none'> &nbsp;&nbsp;Views: <span id="busuanzi_value_page_pv"></span></span>
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2024</span>
+          </h2>
+        </div>
       
-  </h3>
-  <h1>
-    新的开始！
-  </h1>
-  <div class="content markdown-body">
-    <h2 id="⭐网站历史">⭐网站历史</h2>
-<ul>
-<li>
-<p>2021年10月，得知github上可以部署静态网站，于是通过纯手撸html得到了第一个粗糙的主页；</p>
-</li>
-<li>
-<p>2022年寒假期间，自学了一点三大件，通过纯手撸html+css+js得到了看起来更美观的主页（奈何本人色彩搭配以及排版能力啥的不太行，所以可能从美学的角度来看还是不太好）；</p>
-</li>
-<li>
-<p>2022年暑假期末之后，懂得了用轮子的重要性，接触了hexo博客框架，选择了fluid主题，不得不说美观程度一下子起飞了，可惜后来学业繁忙也没在上面放什么文章。再后来图床都挂了，文章里面只剩下失效的超链接；</p>
-</li>
-<li>
-<p>今年寒假期末之后，心血来潮想要恢复一下这个站点。主要是有的时候想要写一些带公式的文章，其它平台或多或少有些不满意之处，于是耗费了些时间重建了一下主页。不过这次换了一个更加简洁的主题，一方面不会过于大众化，另一方面也不用担心图床挂掉导致网页变丑陋。</p>
-</li>
-<li>
-<p>经过两天的调试，新一版本的个人博客终于完工了。</p>
-</li>
-</ul>
-<h2 id="🌟本次更新">🌟本次更新</h2>
-<ul>
-<li>
-<p>去除了上一个主题中大部分华丽的内容：例如巨大的头图、炫酷的文字特效、留言板、繁复的标签分类、字数统计、友情链接……</p>
-</li>
-<li>
-<p>更换了一个小众的极简风格，修改了一些小地方以满足自己的需求（比如原主题居然只能放根目录下）</p>
-</li>
-<li>
-<p>一切以简洁至上：除了文章以外只保留一个按照时间顺序列出文章的archive页面。保留网站运行时长是因为想要延续这个传统。</p>
-</li>
-<li>
-<p>更换了左下角的live2d模型：相比之前增加了一些稍复杂的表情互动，可以通过点击触发；仍然保留了光标追踪功能，只不过追踪范围仅限canvas区域；触屏设备的相应交互方式为点击（更换表情）和拖动（视线跟随）；由于之前直接拿的别人编译好的脚本不支持表情，这次直接去下了Cubism的web SDK，读了一整天代码找到了需要修改的地方，终于适配了自己的模型。</p>
-</li>
-<li>
-<p>之前的站点仍然保留，只不过移动到别的地方了，可以通过主页头像下方的🔗图标访问（失效的图片链接还有待恢复）；</p>
-</li>
-</ul>
-<h2 id="✨-未来展望">✨ 未来展望</h2>
-<p>可能以后这里主要放些学习笔记和内心随感之类的。应该不会有太多图片，毕竟简洁至上。主要是之前有同学问我为什么要把一些学习随笔放QQ空间里，想了想确实不支持公式输入挺难受的，所以不如把个人博客重新启用一下，而且电脑上写着确实更舒服一些。当然有些那种突然的emo小情绪适合在深夜发电的还是会继续放手机端。</p>
-<p>欢迎新老朋友前来捧场！</p>
-
-  </div>
-  
-    
-      <a id="older" class="blog-nav" href="/blog/2024/01/04/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94240104/">OLDER&nbsp;&gt;</a>
-      
-        
-          <a id="newer" class="blog-nav" href="/blog/2024/02/28/%E6%A4%8D%E7%89%A9%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99240228/">&lt;&nbsp;NEWER</a>
-          
+      <div class="post-item" title="植物命名规则">
+        <div class="time-m-d">02-28</div>
+        <div class="title">
+          <a href="/blog/2024/02/28/%E6%A4%8D%E7%89%A9%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99240228/">
             
+              <span>植物命名规则</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="新的开始！">
+        <div class="time-m-d">01-17</div>
+        <div class="title">
+          <a href="/blog/2024/01/17/hello-world/">
+            
+              <span>新的开始！</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="电子云形状与球谐函数">
+        <div class="time-m-d">01-04</div>
+        <div class="title">
+          <a href="/blog/2024/01/04/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94240104/">
+            
+              <span>电子云形状与球谐函数</span>
+            
+          </a>
+        </div>
+      </div>
+    
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2023</span>
+          </h2>
+        </div>
+      
+      <div class="post-item" title="Wasserstein距离与最优输运问题">
+        <div class="time-m-d">12-18</div>
+        <div class="title">
+          <a href="/blog/2023/12/18/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94231218/">
+            
+              <span>Wasserstein距离与最优输运问题</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="信封问题">
+        <div class="time-m-d">10-21</div>
+        <div class="title">
+          <a href="/blog/2023/10/21/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94231021/">
+            
+              <span>信封问题</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="高斯的故事">
+        <div class="time-m-d">09-30</div>
+        <div class="title">
+          <a href="/blog/2023/09/30/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230930/">
+            
+              <span>高斯的故事</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="球体的体积">
+        <div class="time-m-d">09-29</div>
+        <div class="title">
+          <a href="/blog/2023/09/29/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230929/">
+            
+              <span>球体的体积</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="覆盖的矛盾">
+        <div class="time-m-d">09-27</div>
+        <div class="title">
+          <a href="/blog/2023/09/27/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230927/">
+            
+              <span>覆盖的矛盾</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="量子纠缠的数学解释">
+        <div class="time-m-d">09-16</div>
+        <div class="title">
+          <a href="/blog/2023/09/16/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230916/">
+            
+              <span>量子纠缠的数学解释</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="特征方程解法">
+        <div class="time-m-d">05-10</div>
+        <div class="title">
+          <a href="/blog/2023/05/10/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230510-2/">
+            
+              <span>特征方程解法</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="同构之美">
+        <div class="time-m-d">05-10</div>
+        <div class="title">
+          <a href="/blog/2023/05/10/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230510/">
+            
+              <span>同构之美</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="自指悖论的规避">
+        <div class="time-m-d">04-05</div>
+        <div class="title">
+          <a href="/blog/2023/04/05/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230405/">
+            
+              <span>自指悖论的规避</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="关于“纯杂理论”的思考">
+        <div class="time-m-d">03-12</div>
+        <div class="title">
+          <a href="/blog/2023/03/12/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230312/">
+            
+              <span>关于“纯杂理论”的思考</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="无歧义与无前缀编码">
+        <div class="time-m-d">03-08</div>
+        <div class="title">
+          <a href="/blog/2023/03/08/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230308/">
+            
+              <span>无歧义与无前缀编码</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="ML课堂随感">
+        <div class="time-m-d">03-04</div>
+        <div class="title">
+          <a href="/blog/2023/03/04/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94230304/">
+            
+              <span>ML课堂随感</span>
+            
+          </a>
+        </div>
+      </div>
+    
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2022</span>
+          </h2>
+        </div>
+      
+      <div class="post-item" title="饱和烷烃同分异构体计数">
+        <div class="time-m-d">06-14</div>
+        <div class="title">
+          <a href="/blog/2022/06/14/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94220614/">
+            
+              <span>饱和烷烃同分异构体计数</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="关于z=x+iy的解析表示">
+        <div class="time-m-d">06-13</div>
+        <div class="title">
+          <a href="/blog/2022/06/13/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94220613/">
+            
+              <span>关于z=x+iy的解析表示</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="紧性与完备性">
+        <div class="time-m-d">06-01</div>
+        <div class="title">
+          <a href="/blog/2022/06/01/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94220601/">
+            
+              <span>紧性与完备性</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="球盒模型">
+        <div class="time-m-d">05-15</div>
+        <div class="title">
+          <a href="/blog/2022/05/15/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94220515/">
+            
+              <span>球盒模型</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="概率论习题一则">
+        <div class="time-m-d">05-13</div>
+        <div class="title">
+          <a href="/blog/2022/05/13/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94220513/">
+            
+              <span>概率论习题一则</span>
+            
+          </a>
+        </div>
+      </div>
+    
+  </div>
 </div>
+
         <div class="footer">
   
     <div class="footer-more">
@@ -188,6 +369,11 @@
     </div>
   
   <!-- analysis -->
+  
+    <div id="busuanzi_container_site_pv" style="display: none;">
+      Total views: <span id="busuanzi_value_site_pv"></span>. 
+      Total visitors: <span id="busuanzi_value_site_uv"></span>. 
+    </div>
   
   <!-- duration -->
   <div id="timeDate"></div>
